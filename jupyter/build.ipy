@@ -229,7 +229,7 @@ def build_releng():
 
 def build_ereleng():
   # !rm -rf archiso-profiles >/dev/null 2>&1
-  !git clone https://gitlab.archlinux.org/tallero/archiso-profiles >/dev/null 2>&1
+  !git clone https://github.com/fhh200000/archiso-profiles >/dev/null 2>&1
   !useradd user >/dev/null 2>&1
   !chown -R user:user archiso-profiles /tmp
   !su user -c "cd archiso-profiles/ereleng && bash build_repo.sh"
@@ -263,6 +263,6 @@ def install_deps():
   install_packaged_deps()
   install_unpackaged_deps()
 
-install_deps()
+#install_deps()
 build_ereleng()
 
