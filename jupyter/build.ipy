@@ -54,11 +54,11 @@ def install_gpg():
   print("install gpg")
   !rm -rf gnupg-2.3.6
   !apt install libksba-dev libgnutls28-dev
-  !wget https://gnupg.org/ftp/gcrypt/gnupg/gnupg-2.3.6.tar.bz2 >/dev/null 2>&1
+  !wget https://gnupg.org/ftp/gcrypt/gnupg/gnupg-2.3.6.tar.bz2 
   !tar xf gnupg-2.3.6.tar.bz2
-  !cd gnupg-2.3.6 && ./configure --prefix=/usr --disable-gpg-test >/dev/null 2>&1
-  !cd gnupg-2.3.6 && make >/dev/null 2>&1
-  !cd gnupg-2.3.6 && sudo make install >/dev/null 2>&1
+  !cd gnupg-2.3.6 && ./configure --prefix=/usr --disable-gpg-test
+  !cd gnupg-2.3.6 && make 
+  !cd gnupg-2.3.6 && sudo make install 
 
 def install_libassuan():
   print("install libassuan")
@@ -76,9 +76,9 @@ def install_gpgme_error():
   !apt remove libgpg-error-dev >/dev/null 2>&1
   !wget https://www.gnupg.org/ftp/gcrypt/libgpg-error/libgpg-error-1.31.tar.bz2 >/dev/null 2>&1
   !tar xf libgpg-error-1.31.tar.bz2
-  !cd libgpg-error-1.31 && ./configure --prefix=/usr #>/dev/null 2>&1
-  !cd libgpg-error-1.31 && make #>/dev/null 2>&1
-  !cd libgpg-error-1.31 && sudo make install #>/dev/null 2>&1
+  !cd libgpg-error-1.31 && ./configure --prefix=/usr 
+  !cd libgpg-error-1.31 && make 
+  !cd libgpg-error-1.31 && sudo make install 
   !cp -r /usr/lib/libgpg-error* /usr/lib/x86_64-linux-gnu
 
 def install_gpgme():
@@ -264,5 +264,5 @@ def install_deps():
   install_unpackaged_deps()
 
 install_deps()
-#build_ereleng()
+build_ereleng()
 
