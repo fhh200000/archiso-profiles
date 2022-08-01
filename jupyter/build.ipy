@@ -44,11 +44,11 @@ def install_ntph():
 
 def install_gcrypt():
   print("install gcrypt")
-  !wget https://www.gnupg.org/ftp/gcrypt/libgcrypt/libgcrypt-1.10.1.tar.bz2 >/dev/null 2>&1
+  !wget https://www.gnupg.org/ftp/gcrypt/libgcrypt/libgcrypt-1.10.1.tar.bz2 
   !tar xf libgcrypt-1.10.1.tar.bz2
-  !cd libgcrypt-1.10.1 && ./configure --prefix=/usr >/dev/null 2>&1
-  !cd libgcrypt-1.10.1 && make >/dev/null 2>&1
-  !cd libgcrypt-1.10.1 && sudo make install >/dev/null 2>&1
+  !cd libgcrypt-1.10.1 && ./configure --prefix=/usr
+  !cd libgcrypt-1.10.1 && make
+  !cd libgcrypt-1.10.1 && sudo make install
 
 def install_gpg():
   print("install gpg")
@@ -74,7 +74,7 @@ def install_gpgme_error():
   # !rm -rf libgpg-error-1.31
   #!apt install libassuan-dev
   !apt remove libgpg-error-dev >/dev/null 2>&1
-  !wget https://www.gnupg.org/ftp/gcrypt/libgpg-error/libgpg-error-1.31.tar.bz2 >/dev/null 2>&1
+  !wget https://www.gnupg.org/ftp/gcrypt/libgpg-error/libgpg-error-1.31.tar.bz2
   !tar xf libgpg-error-1.31.tar.bz2
   !cd libgpg-error-1.31 && ./configure --prefix=/usr 
   !cd libgpg-error-1.31 && make 
@@ -86,9 +86,9 @@ def install_gpgme():
   !rm -rf gpgme-1.13.1
   !wget https://www.gnupg.org/ftp/gcrypt/gpgme/gpgme-1.13.1.tar.bz2
   !tar xf gpgme-1.13.1.tar.bz2
-  !cd gpgme-1.13.1 && ./configure --prefix=/usr --disable-gpg-test --enable-languages="cl cpp" --disable-fd-passing --disable-gpgsm-test >/dev/null 2>&1
-  !cd gpgme-1.13.1 &&  make >/dev/null 2>&1
-  !cd gpgme-1.13.1 && sudo make install >/dev/null 2>&1
+  !cd gpgme-1.13.1 && ./configure --prefix=/usr --disable-gpg-test --enable-languages="cl cpp" --disable-fd-passing --disable-gpgsm-test
+  !cd gpgme-1.13.1 &&  make
+  !cd gpgme-1.13.1 && sudo make install
 
 def install_zstd():
   print("install zstd")
