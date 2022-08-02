@@ -88,6 +88,8 @@ def install_gpgme():
   !tar xf gpgme-1.13.1.tar.bz2
   !cd gpgme-1.13.1 && ./configure --prefix=/usr --disable-gpg-test --enable-languages="cl cpp" --disable-fd-passing --disable-gpgsm-test
   !cd gpgme-1.13.1 &&  make
+  #fix a bug
+  !cd gpgme-1.13.1 && touch src/.libs/libgpgme.lai
   !cd gpgme-1.13.1 && sudo make install
 
 def install_zstd():
